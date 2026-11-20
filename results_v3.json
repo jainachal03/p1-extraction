@@ -1,0 +1,602 @@
+[
+ {
+  "row": 1,
+  "label": {
+   "category": "other",
+   "urgency": 1,
+   "amount": null
+  },
+  "pred": {
+   "category": "other",
+   "urgency": 1,
+   "amount": null,
+   "summary": "Customer inquires about a potential incorrect charge on their account."
+  },
+  "score": {
+   "valid": 1,
+   "category": 1,
+   "amount": 1,
+   "urgency": 1
+  }
+ },
+ {
+  "row": 2,
+  "label": {
+   "category": "other",
+   "urgency": 1,
+   "amount": null
+  },
+  "pred": {
+   "category": "other",
+   "urgency": 1,
+   "amount": null,
+   "summary": "Customer inquires about payment processing times."
+  },
+  "score": {
+   "valid": 1,
+   "category": 1,
+   "amount": 1,
+   "urgency": 1
+  }
+ },
+ {
+  "row": 3,
+  "label": {
+   "category": "refund",
+   "urgency": 2,
+   "amount": 499
+  },
+  "pred": {
+   "category": "refund",
+   "urgency": 2,
+   "amount": 499.0,
+   "summary": "Customer requests expedited refund for a cancelled purchase."
+  },
+  "score": {
+   "valid": 1,
+   "category": 1,
+   "amount": 1,
+   "urgency": 1
+  }
+ },
+ {
+  "row": 4,
+  "label": {
+   "category": "other",
+   "urgency": 4,
+   "amount": null
+  },
+  "pred": {
+   "category": "other",
+   "urgency": 4,
+   "amount": null,
+   "summary": "Customer reports an outstanding invoice issue and demands immediate resolution."
+  },
+  "score": {
+   "valid": 1,
+   "category": 1,
+   "amount": 1,
+   "urgency": 1
+  }
+ },
+ {
+  "row": 5,
+  "label": {
+   "category": "failed_payment",
+   "urgency": 2,
+   "amount": 499
+  },
+  "pred": {
+   "category": "failed_payment",
+   "urgency": 2,
+   "amount": 499.0,
+   "summary": "Customer requests assistance with a failed 499 rupees payment and pending refund."
+  },
+  "score": {
+   "valid": 1,
+   "category": 1,
+   "amount": 1,
+   "urgency": 1
+  }
+ },
+ {
+  "row": 6,
+  "label": {
+   "category": "failed_payment",
+   "urgency": 2,
+   "amount": 1200
+  },
+  "pred": {
+   "category": "failed_payment",
+   "urgency": 2,
+   "amount": 1200.0,
+   "summary": "Customer inquires about a failed payment of 1200 rupees."
+  },
+  "score": {
+   "valid": 1,
+   "category": 1,
+   "amount": 1,
+   "urgency": 1
+  }
+ },
+ {
+  "row": 7,
+  "label": {
+   "category": "other",
+   "urgency": 5,
+   "amount": null
+  },
+  "pred": {
+   "category": "refund",
+   "urgency": 5,
+   "amount": null,
+   "summary": "Customer reports a delayed payment confirmation and threatens to file a chargeback."
+  },
+  "score": {
+   "valid": 1,
+   "category": 0,
+   "amount": 1,
+   "urgency": 1
+  }
+ },
+ {
+  "row": 8,
+  "label": {
+   "category": "fraud",
+   "urgency": 4,
+   "amount": 7000
+  },
+  "pred": {
+   "category": "fraud",
+   "urgency": 5,
+   "amount": 7000.0,
+   "summary": "Customer reports an unauthorized transaction of 7000 rupees and expresses extreme distress."
+  },
+  "score": {
+   "valid": 1,
+   "category": 1,
+   "amount": 1,
+   "urgency": 0
+  }
+ },
+ {
+  "row": 9,
+  "label": {
+   "category": "refund",
+   "urgency": 5,
+   "amount": 150
+  },
+  "pred": {
+   "category": "refund",
+   "urgency": 5,
+   "amount": null,
+   "summary": "Customer requests refund for a returned item and threatens legal action for delays."
+  },
+  "score": {
+   "valid": 1,
+   "category": 1,
+   "amount": 0,
+   "urgency": 1
+  }
+ },
+ {
+  "row": 10,
+  "label": {
+   "category": "fraud",
+   "urgency": 3,
+   "amount": 7000
+  },
+  "pred": {
+   "category": "fraud",
+   "urgency": 3,
+   "amount": 7000.0,
+   "summary": "Customer reports an unauthorized debit of 7000 rupees."
+  },
+  "score": {
+   "valid": 1,
+   "category": 1,
+   "amount": 1,
+   "urgency": 1
+  }
+ },
+ {
+  "row": 11,
+  "label": {
+   "category": "failed_payment",
+   "urgency": 5,
+   "amount": 1200
+  },
+  "pred": {
+   "category": "failed_payment",
+   "urgency": 5,
+   "amount": 1200.0,
+   "summary": "Customer reports a failed payment of 1200 rupees and expresses concern about potential legal action."
+  },
+  "score": {
+   "valid": 1,
+   "category": 1,
+   "amount": 1,
+   "urgency": 1
+  }
+ },
+ {
+  "row": 12,
+  "label": {
+   "category": "failed_payment",
+   "urgency": 3,
+   "amount": 7000
+  },
+  "pred": {
+   "category": "other",
+   "urgency": 2,
+   "amount": 7000.0,
+   "summary": "Customer inquires about a failed payment of 7000 rupees."
+  },
+  "score": {
+   "valid": 1,
+   "category": 0,
+   "amount": 1,
+   "urgency": 0
+  }
+ },
+ {
+  "row": 13,
+  "label": {
+   "category": "other",
+   "urgency": 2,
+   "amount": 499
+  },
+  "pred": {
+   "category": "other",
+   "urgency": 1,
+   "amount": null,
+   "summary": "Customer inquires about payment processing time."
+  },
+  "score": {
+   "valid": 1,
+   "category": 1,
+   "amount": 0,
+   "urgency": 0
+  }
+ },
+ {
+  "row": 14,
+  "label": {
+   "category": "failed_payment",
+   "urgency": 4,
+   "amount": 150
+  },
+  "pred": {
+   "category": "failed_payment",
+   "urgency": 4,
+   "amount": 150.0,
+   "summary": "Customer is waiting for resolution after a failed payment attempt of 150 rupees."
+  },
+  "score": {
+   "valid": 1,
+   "category": 1,
+   "amount": 1,
+   "urgency": 1
+  }
+ },
+ {
+  "row": 15,
+  "label": {
+   "category": "refund",
+   "urgency": 4,
+   "amount": 7000
+  },
+  "pred": {
+   "category": "refund",
+   "urgency": 4,
+   "amount": 7000.0,
+   "summary": "Customer requests urgent refund for cancelled purchase of 7000 rupees."
+  },
+  "score": {
+   "valid": 1,
+   "category": 1,
+   "amount": 1,
+   "urgency": 1
+  }
+ },
+ {
+  "row": 16,
+  "label": {
+   "category": "fraud",
+   "urgency": 3,
+   "amount": 7000
+  },
+  "pred": {
+   "category": "fraud",
+   "urgency": 5,
+   "amount": 7000.0,
+   "summary": "Customer reports an unauthorized debit of 7000 rupees and requests immediate review and resolution."
+  },
+  "score": {
+   "valid": 1,
+   "category": 1,
+   "amount": 1,
+   "urgency": 0
+  }
+ },
+ {
+  "row": 17,
+  "label": {
+   "category": "fraud",
+   "urgency": 3,
+   "amount": 21000
+  },
+  "pred": {
+   "category": "fraud",
+   "urgency": 4,
+   "amount": 21000.0,
+   "summary": "Customer reports an unauthorized debit of 21000 rupees and requests investigation."
+  },
+  "score": {
+   "valid": 1,
+   "category": 1,
+   "amount": 1,
+   "urgency": 0
+  }
+ },
+ {
+  "row": 18,
+  "label": {
+   "category": "refund",
+   "urgency": 2,
+   "amount": 499
+  },
+  "pred": {
+   "category": "refund",
+   "urgency": 4,
+   "amount": 499.0,
+   "summary": "Customer requests an urgent refund for a cancelled purchase of 499 rupees."
+  },
+  "score": {
+   "valid": 1,
+   "category": 1,
+   "amount": 1,
+   "urgency": 0
+  }
+ },
+ {
+  "row": 19,
+  "label": {
+   "category": "fraud",
+   "urgency": 5,
+   "amount": 1200
+  },
+  "pred": {
+   "category": "fraud",
+   "urgency": 5,
+   "amount": 1200.0,
+   "summary": "Customer reports an unauthorized payment of 1200 rupees and considers legal action."
+  },
+  "score": {
+   "valid": 1,
+   "category": 1,
+   "amount": 1,
+   "urgency": 1
+  }
+ },
+ {
+  "row": 20,
+  "label": {
+   "category": "refund",
+   "urgency": 2,
+   "amount": 150
+  },
+  "pred": {
+   "category": "refund",
+   "urgency": 2,
+   "amount": 150.0,
+   "summary": "Customer requests a refund of 150 rupees for a cancelled purchase."
+  },
+  "score": {
+   "valid": 1,
+   "category": 1,
+   "amount": 1,
+   "urgency": 1
+  }
+ },
+ {
+  "row": 21,
+  "label": {
+   "category": "refund",
+   "urgency": 3,
+   "amount": 7000
+  },
+  "pred": {
+   "category": "refund",
+   "urgency": 2,
+   "amount": 7000.0,
+   "summary": "Customer requests refund for cancelled purchase of 7000 rupees."
+  },
+  "score": {
+   "valid": 1,
+   "category": 1,
+   "amount": 1,
+   "urgency": 0
+  }
+ },
+ {
+  "row": 22,
+  "label": {
+   "category": "refund",
+   "urgency": 3,
+   "amount": 21000
+  },
+  "pred": {
+   "category": "refund",
+   "urgency": 4,
+   "amount": 21000.0,
+   "summary": "Customer requests an urgent refund for a cancelled purchase of 21000 rupees."
+  },
+  "score": {
+   "valid": 1,
+   "category": 1,
+   "amount": 1,
+   "urgency": 0
+  }
+ },
+ {
+  "row": 23,
+  "label": {
+   "category": "failed_payment",
+   "urgency": 4,
+   "amount": 150
+  },
+  "pred": {
+   "category": "failed_payment",
+   "urgency": 4,
+   "amount": 150.0,
+   "summary": "Customer reports a failed payment of 150 rupees with no resolution after 2 days."
+  },
+  "score": {
+   "valid": 1,
+   "category": 1,
+   "amount": 1,
+   "urgency": 1
+  }
+ },
+ {
+  "row": 24,
+  "label": {
+   "category": "other",
+   "urgency": 1,
+   "amount": null
+  },
+  "pred": {
+   "category": "other",
+   "urgency": 1,
+   "amount": null,
+   "summary": "Customer inquires about payment processing times."
+  },
+  "score": {
+   "valid": 1,
+   "category": 1,
+   "amount": 1,
+   "urgency": 1
+  }
+ },
+ {
+  "row": 25,
+  "label": {
+   "category": "other",
+   "urgency": 4,
+   "amount": null
+  },
+  "pred": {
+   "category": "other",
+   "urgency": 4,
+   "amount": null,
+   "summary": "Customer requests an update on a pending payment and expresses concern about order status."
+  },
+  "score": {
+   "valid": 1,
+   "category": 1,
+   "amount": 1,
+   "urgency": 1
+  }
+ },
+ {
+  "row": 26,
+  "label": {
+   "category": "fraud",
+   "urgency": 2,
+   "amount": 2400
+  },
+  "pred": {
+   "category": "fraud",
+   "urgency": 4,
+   "amount": 2400.0,
+   "summary": "Customer reports an unauthorized charge of 2400 rupees and expresses dissatisfaction."
+  },
+  "score": {
+   "valid": 1,
+   "category": 1,
+   "amount": 1,
+   "urgency": 0
+  }
+ },
+ {
+  "row": 27,
+  "label": {
+   "category": "failed_payment",
+   "urgency": 5,
+   "amount": 21000
+  },
+  "pred": {
+   "category": "fraud",
+   "urgency": 5,
+   "amount": 21000.0,
+   "summary": "Customer reports repeated failed payments and threatens legal action and chargeback."
+  },
+  "score": {
+   "valid": 1,
+   "category": 0,
+   "amount": 1,
+   "urgency": 1
+  }
+ },
+ {
+  "row": 28,
+  "label": {
+   "category": "fraud",
+   "urgency": 5,
+   "amount": 7000
+  },
+  "pred": {
+   "category": "fraud",
+   "urgency": 5,
+   "amount": 7000.0,
+   "summary": "Customer threatens legal action over an unauthorized debit charge of 7000 rupees."
+  },
+  "score": {
+   "valid": 1,
+   "category": 1,
+   "amount": 1,
+   "urgency": 1
+  }
+ },
+ {
+  "row": 29,
+  "label": {
+   "category": "fraud",
+   "urgency": 2,
+   "amount": 2400
+  },
+  "pred": {
+   "category": "fraud",
+   "urgency": 3,
+   "amount": 2400.0,
+   "summary": "Customer reports an unauthorized debit of 2400 rupees."
+  },
+  "score": {
+   "valid": 1,
+   "category": 1,
+   "amount": 1,
+   "urgency": 0
+  }
+ },
+ {
+  "row": 30,
+  "label": {
+   "category": "other",
+   "urgency": 2,
+   "amount": 2400
+  },
+  "pred": {
+   "category": "refund",
+   "urgency": 3,
+   "amount": 2400.0,
+   "summary": "Customer requests refund for a mistaken charge of 2400 rupees."
+  },
+  "score": {
+   "valid": 1,
+   "category": 0,
+   "amount": 1,
+   "urgency": 0
+  }
+ }
+]
