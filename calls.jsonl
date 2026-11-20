@@ -1,0 +1,11 @@
+{"prompt_tokens": 35, "completion_tokens": 393, "seconds": 27.81}
+{"temperature": 0.0, "prompt_tokens": 39, "completion_tokens": 43, "seconds": 15.21}
+{"temperature": 0.0, "prompt_tokens": 39, "completion_tokens": 60, "seconds": 4.06}
+{"temperature": 0.0, "prompt_tokens": 39, "completion_tokens": 60, "seconds": 3.86}
+{"temperature": 0.0, "prompt_tokens": 39, "completion_tokens": 60, "seconds": 3.77}
+{"temperature": 0.0, "prompt_tokens": 39, "completion_tokens": 60, "seconds": 4.13}
+{"temperature": 1.0, "prompt_tokens": 39, "completion_tokens": 36, "seconds": 2.38}
+{"temperature": 1.0, "prompt_tokens": 39, "completion_tokens": 28, "seconds": 1.88}
+{"temperature": 1.0, "prompt_tokens": 39, "completion_tokens": 35, "seconds": 2.21}
+{"temperature": 1.0, "prompt_tokens": 39, "completion_tokens": 42, "seconds": 2.8}
+{"temperature": 1.0, "prompt_tokens": 39, "completion_tokens": 42, "seconds": 2.73}
