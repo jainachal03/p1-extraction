@@ -1,0 +1,83 @@
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 
+bare: valid 30/30  category 25/30  amount 30/30  urgency 15/30
+Traceback (most recent call last):
+  File "/home/achal/fde/p1-extraction/compare.py", line 44, in <module>
+    asyncio.run(run(v))
+  File "/home/achal/.local/share/uv/python/cpython-3.12.16-linux-x86_64-gnu/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/home/achal/.local/share/uv/python/cpython-3.12.16-linux-x86_64-gnu/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/achal/.local/share/uv/python/cpython-3.12.16-linux-x86_64-gnu/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/home/achal/fde/p1-extraction/compare.py", line 23, in run
+    r = await llm.chat.completions.create(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/achal/fde/p1-extraction/.venv/lib/python3.12/site-packages/openai/resources/chat/completions/completions.py", line 3414, in create
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/achal/fde/p1-extraction/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 2085, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/achal/fde/p1-extraction/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1805, in request
+    response = await self._send_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/achal/fde/p1-extraction/.venv/lib/python3.12/site-packages/openai/_client.py", line 738, in _send_request
+    return await async_send_request(self, request, stream=stream, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/achal/fde/p1-extraction/.venv/lib/python3.12/site-packages/openai/lib/_client_auth.py", line 794, in async_send_request
+    response = await self._send_with_auth_retry(request, stream=stream, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/achal/fde/p1-extraction/.venv/lib/python3.12/site-packages/openai/_client.py", line 724, in _send_with_auth_retry
+    return await async_send_with_auth_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/achal/fde/p1-extraction/.venv/lib/python3.12/site-packages/openai/lib/_client_auth.py", line 779, in async_send_with_auth_retry
+    response = await super(_owner, self)._send_request(request, stream=stream, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/achal/fde/p1-extraction/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1722, in _send_request
+    return await self._client.send(request, stream=stream, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/achal/fde/p1-extraction/.venv/lib/python3.12/site-packages/httpx2/_client.py", line 1812, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/achal/fde/p1-extraction/.venv/lib/python3.12/site-packages/httpx2/_client.py", line 1840, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/achal/fde/p1-extraction/.venv/lib/python3.12/site-packages/httpx2/_client.py", line 1875, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/achal/fde/p1-extraction/.venv/lib/python3.12/site-packages/httpx2/_client.py", line 1909, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/achal/fde/p1-extraction/.venv/lib/python3.12/site-packages/httpx2/_transports/default.py", line 385, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/achal/fde/p1-extraction/.venv/lib/python3.12/site-packages/httpcore2/_async/connection_pool.py", line 243, in handle_async_request
+    raise exc from None
+  File "/home/achal/fde/p1-extraction/.venv/lib/python3.12/site-packages/httpcore2/_async/connection_pool.py", line 225, in handle_async_request
+    response = await connection.handle_async_request(pool_request.request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/achal/fde/p1-extraction/.venv/lib/python3.12/site-packages/httpcore2/_async/connection.py", line 98, in handle_async_request
+    return await self._connection.handle_async_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/achal/fde/p1-extraction/.venv/lib/python3.12/site-packages/httpcore2/_async/http11.py", line 124, in handle_async_request
+    await self._response_closed()
+  File "/home/achal/fde/p1-extraction/.venv/lib/python3.12/site-packages/httpcore2/_async/http11.py", line 228, in _response_closed
+    await self.aclose()
+  File "/home/achal/fde/p1-extraction/.venv/lib/python3.12/site-packages/httpcore2/_async/http11.py", line 236, in aclose
+    await self._network_stream.aclose()
+  File "/home/achal/fde/p1-extraction/.venv/lib/python3.12/site-packages/httpcore2/_backends/anyio.py", line 58, in aclose
+    await self._stream.aclose()
+  File "/home/achal/fde/p1-extraction/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1499, in aclose
+    self._transport.abort()
+  File "/home/achal/.local/share/uv/python/cpython-3.12.16-linux-x86_64-gnu/lib/python3.12/asyncio/selector_events.py", line 836, in abort
+    self._force_close(None)
+  File "/home/achal/.local/share/uv/python/cpython-3.12.16-linux-x86_64-gnu/lib/python3.12/asyncio/selector_events.py", line 906, in _force_close
+    self._loop.call_soon(self._call_connection_lost, exc)
+  File "/home/achal/.local/share/uv/python/cpython-3.12.16-linux-x86_64-gnu/lib/python3.12/asyncio/base_events.py", line 799, in call_soon
+    self._check_closed()
+  File "/home/achal/.local/share/uv/python/cpython-3.12.16-linux-x86_64-gnu/lib/python3.12/asyncio/base_events.py", line 545, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed

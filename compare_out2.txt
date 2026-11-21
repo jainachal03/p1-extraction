@@ -1,0 +1,6 @@
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 
+persona: valid 30/30  category 23/30  amount 30/30  urgency 16/30
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 
+rules: valid 30/30  category 27/30  amount 30/30  urgency 21/30
+1 2 4 7 8 9 15 17 18 24 25 27 29 
+reasoning: valid 13/30  category 8/30  amount 13/30  urgency 8/30
