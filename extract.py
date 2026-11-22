@@ -1,3 +1,4 @@
+from cache import cached_chat
 import asyncio
 import time
 
@@ -64,14 +65,14 @@ async def extract(email, max_attempts=2):
     messages.append({"role": "user", "content": email})
 
     for attempt in range(1, max_attempts + 1):
-        r = await llm.chat.completions.create(
+        text = await cached_chat(
+            llm,
             model=MODEL,
             messages=messages,
             temperature=0,
             max_tokens=200,
             response_format={"type": "json_object"},
         )
-        text = r.choices[0].message.content
         try:
             return apply_rules(Ticket.model_validate_json(text)), attempt
         except ValidationError as err:
