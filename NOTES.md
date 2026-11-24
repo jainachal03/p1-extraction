@@ -12,3 +12,13 @@ Open: 5 over-escalation misses (rows 8,16,17,18,26) on "unauthorized"/"urgent"; 
 Findings: rules +6 urgency, examples +4 more, persona and reasoning = noise (reasoning also +30 tokens/call).
 First reasoning run was invalid 17/30: model dropped required `summary`; Pydantic caught it. Retry with error text matters because temp 0 makes a blind retry identical.
 Examples hurt amount: all 4 tie amount to "charged/debited", so rows 9 and 13 ("purchased for 150", "payment of 499") returned null. Untested fix: add an example with a purchase-price amount.
+
+## Week 3: golden_v4 (100 emails, 25 per category, urgency mix 12/18/20/30/20)
+First run on 100 (v4 prompt): valid 100, category 82, amount 92, urgency 82. Cache: 100 entries, 0 retries.
+Failure taxonomy (36 miss lines):
+A. general questions about refunds/payments/fraud routed to category other (6 rows: 31,32,49,50,67,68), label may be wrong
+B. 'other' emails with money (cashback, bonus, fee, settlement) given urgency 1 and often amount None (86,87,88,89,92,95)
+C. over-escalation of fraud 3/4 to 4/5 on 'unauthorized' (8,16,17,71,72,73,75,18,26)
+D. category mix-ups: failed_payment->refund (56,61,62), fraud->other (74,77,80), fraud->refund (70)
+E. under-escalation: sarcasm 45, bank dispute 83
+F. amount None when money is not 'charged/debited' (9,13,33,86,87,89,95): confirms the Week 2 examples-narrowing hypothesis
