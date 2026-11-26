@@ -1,5 +1,6 @@
 from cache import cached_chat
 import asyncio
+import os
 import time
 
 from openai import AsyncOpenAI
@@ -7,8 +8,8 @@ from pydantic import ValidationError
 
 from schema import Ticket
 
-llm = AsyncOpenAI(base_url="http://localhost:11434/v1", api_key="ollama")
-MODEL = "qwen2.5:3b"
+llm = AsyncOpenAI(base_url=os.environ.get("OLLAMA_BASE_URL", "http://localhost:11434/v1"), api_key="ollama")
+MODEL = os.environ.get("MODEL", "qwen2.5:3b")
 
 SYSTEM = """You are a support triage specialist at a payments company.
 Read one customer email and return ONLY a JSON object with these fields:

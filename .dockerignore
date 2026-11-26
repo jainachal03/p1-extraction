@@ -1,0 +1,8 @@
+.venv
+.git
+__pycache__
+*.jsonl
+llm_cache.db
+calls.jsonl
+results_*.json
+*_out*.txt
