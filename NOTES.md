@@ -39,3 +39,8 @@ New baseline for the pytest gate: category 82, amount 96, urgency 83 on 100.
 category 9/9, amount 8/9, urgency 8/9. Only miss: row 7 (two cancelled orders 2,500 + 3,500 -> model returned None, urgency 2 instead of 3).
 Cascade: amount None disables the 5,000 code rule, so one extraction error caused two wrong fields.
 Idea (not built): schema returns amounts as a list and code sums them.
+
+## Latency and tokens (30 random uncached calls, golden_v4, warm model, Ollama prefix cache)
+p50 4.3 s, p95 6.4 s, max 28.2 s (cold start), mean 5.1 s. Tokens per call: prompt 928, completion 41 (total 29,059 for 30 calls).
+Prompt tokens are 96% of the total. Prefix caching: shared 880-token prefix is not re-read each call.
+Gate 1: container, 100 emails + taxonomy, per-field accuracy (82/96/83), tokens, p95, pytest gate. Remaining: write-up #1.
