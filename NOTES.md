@@ -22,3 +22,15 @@ C. over-escalation of fraud 3/4 to 4/5 on 'unauthorized' (8,16,17,71,72,73,75,18
 D. category mix-ups: failed_payment->refund (56,61,62), fraud->other (74,77,80), fraud->refund (70)
 E. under-escalation: sarcasm 45, bank dispute 83
 F. amount None when money is not 'charged/debited' (9,13,33,86,87,89,95): confirms the Week 2 examples-narrowing hypothesis
+
+Category rule (decided Nov 24): category follows the TOPIC of the email, including general questions
+(a question about how refunds work is `refund`; about blocking a card is `fraud`; about retrying payments is `failed_payment`).
+`other` = anything not about refunds, failed payments or fraud. An unauthorized charge is `fraud` even if the customer asks for money back.
+Consequence: bucket A (6 rows) is a model error. Candidate fix: put this definition in SYSTEM and re-test.
+
+## v9 (category/amount/urgency definitions added to SYSTEM) on golden_v4 (100)
+valid 100, category 82, amount 96, urgency 83 (v7: 82/92/82).
+Amount +4, 0 broken (clean win: positive definition, cashback/bonus/shipping rows fixed).
+Urgency: 5 fixed, 4 broken (net +1, within churn); bucket B fixed 3 of 6.
+Category: 2 fixed, 2 broken (all failed_payment); bucket A (general questions -> other) unchanged: prompt sentence does not override the model's prior.
+New baseline for the pytest gate: category 82, amount 96, urgency 83 on 100.

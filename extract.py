@@ -29,7 +29,7 @@ Read one customer email and return ONLY a JSON object with these fields:
 Rules:
 - If the customer says a charge was unauthorized, the category is fraud, even if they also ask for money back.
 - If an amount in rupees appears in the email, use it as the amount.
-Return only the JSON, with no other text."""
+Category is the topic of the email, including general questions: refund (about a refund or return), failed_payment (about a payment that failed or was debited after failing), fraud (about a charge or transfer the customer did not authorize), other (anything else: accounts, cashback, fees, app problems). The amount is the main rupee figure in the email, whatever it refers to (a charge, refund, fee, cashback, bonus or settlement); use null only if no rupee figure appears. Urgency does not depend on category: if money is missing, owed or wrongly taken, use 2 or higher, even for cashback, bonuses, fees or settlements; a question about timing with no money problem stays 1. Return only the JSON, with no other text."""
 
 EXAMPLES = [
     (
