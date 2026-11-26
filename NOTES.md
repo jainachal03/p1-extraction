@@ -34,3 +34,8 @@ Amount +4, 0 broken (clean win: positive definition, cashback/bonus/shipping row
 Urgency: 5 fixed, 4 broken (net +1, within churn); bucket B fixed 3 of 6.
 Category: 2 fixed, 2 broken (all failed_payment); bucket A (general questions -> other) unchanged: prompt sentence does not override the model's prior.
 New baseline for the pytest gate: category 82, amount 96, urgency 83 on 100.
+
+## Multi-amount challenge set (golden_multi.jsonl, 9 emails; rule: amount = money the customer wants returned, separate figures summed)
+category 9/9, amount 8/9, urgency 8/9. Only miss: row 7 (two cancelled orders 2,500 + 3,500 -> model returned None, urgency 2 instead of 3).
+Cascade: amount None disables the 5,000 code rule, so one extraction error caused two wrong fields.
+Idea (not built): schema returns amounts as a list and code sums them.
